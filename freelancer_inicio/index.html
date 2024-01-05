@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseñador Freelancer</title> <!-- SEO: util para los usuarios cuando buscan informacion, páginas etc -->
+    
+    <link rel="preload" href="css/normalize.css" as="style"> <!-- as="style" le dice al navegador que es una hoja de estilos -->
+    <link rel="stylesheet" href="css/normalize.css"> <!-- Normalize: normaliza los estilos de los navegadores -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
-    <!-- Cargar más rápido la hoja de estilos -->
-    <link rel="preload" href="css/style.css" as="style">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- precarga los archivos antes de que se cargue la página con preload -->
+    <link rel="preload" href="css/style.css" as="style"> <!-- as="style" le dice al navegador que es una hoja de estilos -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Hoja de estilos -->
 </head>
 <body>
     <header>
