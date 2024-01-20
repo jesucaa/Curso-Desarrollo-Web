@@ -18,8 +18,25 @@ body {
 .title {
     text-align: center; 
     font-size: var(--fuente-principal); /* 1rem = 10px */
-    font-weight: 700;
 }
+
 .titulo span {
     font-size: 2rem;
+}
+
+.contenedor {
+    width: 120rem;
+    /* centrar el contenedor - En lugar de poner las cuatro propiedades, podemos poner margin: 0 auto; */
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+.navegacion-principal {
+    
 }
