@@ -49,10 +49,6 @@ body {
     }
 }
 
-@media (min-width: 768px) { /* tablet */
-    
-}
-
 .navegacion-principal a {
     display: block;
     text-align: center;
