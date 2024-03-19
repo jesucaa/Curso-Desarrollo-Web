@@ -1,4 +1,5 @@
-:root { /* Custom properties - Definir una paleta de colores*/
+/* Custom properties - Definir una paleta de colores*/
+:root { 
     --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #FFC107;
@@ -10,7 +11,7 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Hack para Box Model */
 }
 
 *, *:before, *:after {
@@ -23,15 +24,8 @@ body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
 }
-.title {
-    text-align: center; 
-    font-size: var(--fuente-principal); /* 1rem = 10px */
-}
 
-.title span {
-    font-size: 2rem;
-}
-
+/* Globales */
 .contenedor {
     max-width: 120rem; /*toma estos pixeles como máximo y solamente si hay ese espacio disponible, si no toma el 100% que tiene por default cualquier div*/
     /* centrar el contenedor - En lugar de poner las cuatro propiedades, podemos poner margin: 0 auto; */
@@ -41,6 +35,52 @@ body {
     margin-left: auto;
 }
 
+.boton {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+
+/* Tipografía */
+h1 {
+    font-size: var(--fuente-principal); /* 1rem = 10px */
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+h1, h2, h3 {
+    text-align: center; 
+}
+
+/* Titulos */
+.title span {
+    font-size: 2rem;
+}
+
+/* Navegación Principal */
 .nav-bg {
     background-color: var(--secundario);
 }
@@ -73,6 +113,7 @@ body {
     font-weight: 700;
 }
 
+/* Hero */
 .hero {
     background-image: url(../img/hero.jpg); /* para imagenes de fondo */
     background-repeat: no-repeat; /* para que la imagen no se repita */
@@ -83,10 +124,24 @@ body {
 
 .contenido-hero {
     position: absolute;
-    background-color: rgba(0, 0, 0, .6); /* para hacer un color con transparencia */
-    background-color: rgb(0 0 0 / 60%); /* o de igual manera esta nueva sintaxis para añadir transparencia */
+    background-color: rgba(0, 0, 0, .7); /* para hacer un color con transparencia */
+    background-color: rgb(0 0 0 / 70%); /* o de igual manera esta nueva sintaxis para añadir transparencia */
     bottom: 0;
     /* esto es para poder seleccionar todo el tamaño de hero */
     width: 100%; 
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+
+.contenido-hero .ubicacion {
+    display: flex;
+    align-items: flex-end;
 }
