@@ -5,6 +5,7 @@
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
 
     --fuente-principal: 3.8rem;
 }
@@ -21,8 +22,9 @@ html {
      lo requieran */
 
 body {
-    font-size: 16px;
+    font-size: 16px; /* 1 rem = 10px */
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /* colores gradiantes/con degradado */
 }
 
 /* Globales */
