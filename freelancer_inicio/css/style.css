@@ -57,6 +57,15 @@ body {
     }
 }
 
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.48);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
 /* Tipografía */
 h1 {
     font-size: var(--fuente-principal); /* 1rem = 10px */
@@ -122,6 +131,7 @@ h1, h2, h3 {
     background-size: cover; /* para tomar todo el ancho disponible */
     height: 450px;
     position: relative; /* el padre siempre debe tener posición relativa para que el hijo se pueda posicionar de forma absoluta */
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -146,4 +156,39 @@ h1, h2, h3 {
 .contenido-hero .ubicacion {
     display: flex;
     align-items: flex-end;
+}
+
+/* Servicios */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+    }
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p {
+   line-height: 2;
+   text-align: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
