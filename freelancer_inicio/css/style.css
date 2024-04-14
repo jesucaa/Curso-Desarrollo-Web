@@ -12,8 +12,16 @@
 
 html {
     font-size: 62.5%;
-    box-sizing: border-box;
-    /* Hack para Box Model */
+    box-sizing: border-box; /* Hack para Box Model */
+    scroll-snap-type: y mandatory;
+}
+
+/* Scroll Snap */
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 /* El asterisco quiere decir que se van a seleccionar todos los elementos de html 
@@ -26,11 +34,9 @@ html {
 }
 
 body {
-    font-size: 16px;
-    /* 1 rem = 10px */
+    font-size: 16px; /* 1 rem = 10px */
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
-    /* colores gradiantes/con degradado */
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /* colores gradiantes/con degradado */
 }
 
 /* Globales */
