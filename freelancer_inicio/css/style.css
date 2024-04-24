@@ -1,11 +1,18 @@
 /* Custom properties - Definir una paleta de colores*/
 :root {
-    --blanco: #ffffff;
+    /* --blanco: #ffffff;
     --oscuro: #212121;
     --primario: #FFC107;
     --secundario: #0097A7;
     --gris: #7DA4A7;
-    --grisClaro: #DFE9F3;
+    --grisClaro: #DFE9F3; */
+
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #BBCDE5;
+    --secundario: #1C5D99;
+    --aqua: #639FAB;
+    
 
     --fuente-principal: 3.8rem;
 }
@@ -233,7 +240,7 @@ h3 {
 }
 
 .servicio h3 {
-    color: var(--secundario);
+    color: black;
     font-weight: normal;
 }
 
@@ -249,7 +256,7 @@ h3 {
 
 /* Formulario: Contacto */
 .formulario {
-    background-color: var(--gris);
+    background-color: var(--aqua);
 
     /* Utilizar el valor más pequeño */
     width: min(60rem, 100%);
@@ -268,7 +275,7 @@ h3 {
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2rem;
-    color: var(--primario);
+    color: var(--blanco);
 }
 
 @media (min-width: 768px) {
