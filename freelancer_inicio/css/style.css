@@ -20,16 +20,17 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model */
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
 }
 
 /* Scroll Snap */
-.servicios,
+/* .servicios,
 .navegacion-principal,
+.proyectos,
 .formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
+} */
 
 /* El asterisco quiere decir que se van a seleccionar todos los elementos de html 
     y todo este bloque quiere decir que se coloca el box-sizing a todos los elementos
@@ -44,6 +45,18 @@ body {
     font-size: 16px; /* 1 rem = 10px */
     font-family: 'Krub', sans-serif;
     background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /* colores gradiantes/con degradado */
+}
+
+.profile-photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 100%;
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+    /* bottom: -50px;
+    position: absolute; */
 }
 
 /* Globales */
@@ -228,18 +241,31 @@ h3 {
     }
 }
 
-.servicio {
+/* Servicios */
+@media (min-width: 768px) {
+    .proyectos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1rem;
+        row-gap: 2rem;
+    }
+}
+
+.servicio,
+.proyecto {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.servicio p {
+.servicio p,
+.proyecto p {
     line-height: 2;
     text-align: center;
 }
 
-.servicio h3 {
+.servicio h3,
+.proyecto h3 {
     color: black;
     font-weight: normal;
 }
@@ -252,6 +278,15 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.proyecto img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.proyecto a {
+    text-decoration: none;
 }
 
 /* Formulario: Contacto */
