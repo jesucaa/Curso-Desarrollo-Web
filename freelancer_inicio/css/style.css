@@ -241,7 +241,7 @@ h3 {
     }
 }
 
-/* Servicios */
+/* Proyectos */
 @media (min-width: 768px) {
     .proyectos {
         display: grid;
@@ -256,6 +256,10 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.proyecto a {
+    margin-bottom: 2rem;
 }
 
 .servicio p,
@@ -287,6 +291,7 @@ h3 {
 
 .proyecto a {
     text-decoration: none;
+
 }
 
 /* Formulario: Contacto */
