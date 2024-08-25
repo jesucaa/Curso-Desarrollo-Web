@@ -1,0 +1,51 @@
+:root {
+    /* Paleta de colores */
+    /* Color Primario - Tomate: color vibrante y cálido atraerá la atención sin ser abrumador */
+    --primario: #FF6347;
+    /* Color Primario - Tomate Oscuro: Ideal para botones de llamada a la acción, bordes, o texto sobre el fondo primario */
+    --primarioOscuro: #CC4F39;
+    /* Color Secundario - Azul Acero: color contrastante para destacar secciones importantes o productos.*/
+    --secundario: #4682B4;
+    /* Color Secundario - Azul Acero Oscuro: para títulos o elementos secundarios que necesitan un toque distintivo*/
+    --secundarioOscuro: #2C5971;
+    /* Blanco y Negro */
+    --blanco: #fff;
+    --negro: #000;
+    --fuentePrincipal: "Staatliches", sans-serif;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* Esto siempre nos permitirá hacer que 1rem sea igual a 10 pixeles */
+  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: var(--primario);
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+p {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blanco);
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+h1, h2, h3 {
+  text-align: center;
+  color: var(--secundario);
+  font-family: var(--fuentePrincipal);
+}
+h1 { font-size: 4rem; }
+h2 { font-size: 3.2rem; }
+h3 { font-size: 2.4rem; }
