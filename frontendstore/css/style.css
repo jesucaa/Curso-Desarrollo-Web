@@ -5,13 +5,13 @@
     /* Color Primario - Tomate Oscuro: Ideal para botones de llamada a la acción, bordes, o texto sobre el fondo primario */
     --primarioOscuro: #CC4F39;
     /* Color Secundario - Azul Acero: color contrastante para destacar secciones importantes o productos.*/
-    --secundario: #4682B4;
+    --secundario: #FFCE00;
     /* Color Secundario - Azul Acero Oscuro: para títulos o elementos secundarios que necesitan un toque distintivo*/
     --secundarioOscuro: #2C5971;
     /* Blanco y Negro */
     --blanco: #fff;
     --negro: #000;
-    --fuentePrincipal: "Staatliches", sans-serif;
+    --fuentePrincipal: "Staatliches", serif;
 }
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -49,3 +49,39 @@ h1, h2, h3 {
 h1 { font-size: 4rem; }
 h2 { font-size: 3.2rem; }
 h3 { font-size: 2.4rem; }
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  margin: 3rem 0;
+}
+/* Footer */
+.footer {
+  background-color: var(--primarioOscuro);
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footer__texto {
+  font-family: var(--fuentePrincipal);
+  text-align: center;
+  font-size: 2rem;
+}
+/* Navegación */
+.navegacion {
+  background-color: var(--primarioOscuro);
+  padding: 1rem;
+  display: flex; /* Utilizamos flexbox para elementos dentro de un contenedor */
+  justify-content: center;
+  gap: 2rem;
+}
+.navegacion__enlace { 
+  font-family: var(--fuentePrincipal);
+  color: var(--blanco);
+  font-size: 3rem;
+}
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+  color: var(--secundario);
+}
