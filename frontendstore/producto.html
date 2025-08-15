@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icono_tienda.png" type="image/x-icon">
 </head>
 <body>
     <header class="header">
@@ -23,7 +24,26 @@
     </nav>
 
     <main class="contenedor">
-        <h1>Productos</h1>
+        <h1>React JS</h1>
+        <div class="camisa">
+            <img class="camisa__imagen" src="img/3.jpg" alt="camisa react js">
+
+            <div class="camisa__contenido">
+                <p>Morbi malesuada venenatis pharetra. Sed sed nisl accumsan, rhoncus magna quis, tincidunt mauris. 
+                Curabitur malesuada purus libero, in rhoncus sapien sollicitudin quis. </p>
+
+                <form class="formulario">
+                    <select class="formulario__campo">
+                        <option disabled selected>-- Selecionar Talla --</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" max="10">
+                    <input type="submit" value="Añadir al Carrito" class="formulario__submit">
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">

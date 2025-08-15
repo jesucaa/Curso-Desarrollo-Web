@@ -1,13 +1,13 @@
 :root {
     /* Paleta de colores */
-    /* Color Primario - Tomate: color vibrante y cálido atraerá la atención sin ser abrumador */
-    --primario: #FF6347;
-    /* Color Primario - Tomate Oscuro: Ideal para botones de llamada a la acción, bordes, o texto sobre el fondo primario */
-    --primarioOscuro: #CC4F39;
-    /* Color Secundario - Azul Acero: color contrastante para destacar secciones importantes o productos.*/
+    /* Color Primario - Fondo */
+    --primario: #A7B6D1;
+    /* Color Primario - Tomate Oscuro: Para fondos que resalten con el color primario */
+    --primarioOscuro: #6E82A7;
+    /* Color Secundario - Amarillo: color contrastante para destacar secciones importantes o productos.*/
     --secundario: #FFCE00;
-    /* Color Secundario - Azul Acero Oscuro: para títulos o elementos secundarios que necesitan un toque distintivo*/
-    --secundarioOscuro: #2C5971;
+    --secundarioOscuro: #E8BA00;
+    --texto: #2A3A65;
     /* Blanco y Negro */
     --blanco: #fff;
     --negro: #000;
@@ -31,7 +31,7 @@ body {
 p {
   font-size: 1.8rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: var(--blanco);
+  color: var(--texto);
 }
 a {
   text-decoration: none;
@@ -40,9 +40,12 @@ a {
   max-width: 120rem;
   margin: 0 auto;
 }
+img {
+  width: 100%;
+}
 h1, h2, h3 {
   text-align: center;
-  color: var(--secundario);
+  color: var(--texto);
   font-family: var(--fuentePrincipal);
 }
 h1 { font-size: 4rem; }
@@ -65,6 +68,7 @@ h3 { font-size: 2.4rem; }
 }
 .footer__texto {
   font-family: var(--fuentePrincipal);
+  color: var(--blanco);
   text-align: center;
   font-size: 2.2rem;
 }
@@ -101,20 +105,14 @@ h3 { font-size: 2.4rem; }
   }
 }
 
-
 /* Productos */
 .producto {
   background-color: var(--primarioOscuro);
   padding: 1rem;
 }
-.producto__imagen {
-  width: 100%;
-}
-.producto__informacion {
-
-}
 .producto__nombre {
   font-size: 4rem;
+  color: var(--blanco);
 }
 .producto__precio {
   font-size: 2.8rem;
@@ -173,7 +171,6 @@ h3 { font-size: 2.4rem; }
 .nosotros__imagen {
   border-radius: 1rem;
   grid-row: 1 / 2;
-  width: 100%;
 }
 @media (min-width: 768px) { /* Si la ventana llega a este tamaño se va a realizar este bloque */
   .nosotros__imagen {
@@ -198,10 +195,45 @@ h3 { font-size: 2.4rem; }
   text-align: center;
 }
 
-.bloque__imagen {
-  width: 100%;
-}
-
 .bloque__titulo {
   margin: 0;
+}
+
+/* Página del producto */
+@media (min-width: 768px) {
+  .camisa {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.formulario__campo {
+  border: 1rem solid var(--primarioOscuro);
+  background-color: transparent;
+  color: var(--blanco);
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  appearance: none;
+}
+.formulario__submit {
+  background-color: var(--secundario);
+  color: var(--negro);
+  border: none;
+  font-family: var(--fuentePrincipal);
+  padding: 2rem;
+  font-size: 2rem;
+  width: 100%;
+  transition: background-color .3s ease;
+  grid-column: 1/3;
+}
+.formulario__submit:hover {
+  cursor: pointer;
+  background-color: var(--secundarioOscuro);
 }
