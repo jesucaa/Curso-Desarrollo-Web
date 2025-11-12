@@ -48,3 +48,22 @@ p {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .contenedor-flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .sidebar {
+        flex-basis: calc(20% - 1rem); /* Los dos sidebar van a ocupar un tamaño base */
+    }
+
+    .contenido-principal {
+        flex-basis: calc(60% - 1rem); /* El main va a ocupar un tamaño base */
+    }
+
+    .sidebar-1 {
+        order: -1; /* Mover el primer sidebar al inicio */
+    }
+}
