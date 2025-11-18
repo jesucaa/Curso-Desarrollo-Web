@@ -49,3 +49,36 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .layout-shifter {
+        display: grid;
+        grid-template-areas: "contenido"
+                             "inferior"; /* esto es para trabajar el template-areas en rows */
+    }
+    .sidebar {
+        grid-area: inferior; /* a partir del tamaño de 768px el sidebar se pasa al final (hasta abajo)*/
+    }
+    .contenido-principal {
+        grid-area: contenido;
+        display: grid;
+        grid-template-areas: "entrada1 entrada2";
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout-shifter {
+        grid-template-areas: "contenido sidebar"; /* esto es para trabajar el template-areas en columns */
+        column-gap: 2rem;
+    }
+    .sidebar {
+        grid-area: sidebar; /* a partir del tamaño de 992px el sidebar vuelve a su posición original (a la derecha)*/
+    }
+    .contenido-principal {
+        grid-area: contenido;
+        grid-template-areas: "entrada1"
+                                "entrada2";
+        grid-template-columns: unset; /* se desactiva el grid-template-columns para que las entradas vuelvan a ocupar todo el ancho (se eliminan) */
+    }
+}
