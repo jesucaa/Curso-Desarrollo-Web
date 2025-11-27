@@ -37,3 +37,29 @@ p {
 }
 
 /** CODIGO AQUI **/
+.contenedor {
+    max-width: 120rem; /* ancho máximo - recomendable para que en ventana completa el contenido no crezca el 95% si no que va a tener un ancho limitado */
+    width: 95%; /* ancho fluido - para que esté centrado el contenido con sus separaciones izq y derecha, y asi este no toma todo el ancho. */
+    margin: 0 auto; /* centrado horizontal */
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .contenedor {
+        width: 80%;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 992px) {
+    .contenedor {
+        width: 60%;
+    }
+}
+
+/* Esta imagen es la que está dentro del contenedor, por lo tanto va a respetar los anchos definidos en el contenedor */
+img {
+    /* max-width: 100% evita que la imagen se desborde del contenedor */
+    max-width: 100%; /* imagenes fluidas - es para que la imagen sea responsive y no sea forzada a crecer a tomar el 100%, osea, no crece más de su tamaño relativo */
+    height: auto; /* mantiene la proporción de la imagen */
+}
