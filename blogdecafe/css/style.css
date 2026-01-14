@@ -10,12 +10,16 @@
 }
 html {
     box-sizing: border-box; /* para que el padding y border no afecten el tamaño de los elementos */
+    overflow-x: hidden; /* evita scroll horizontal */
     font-size: 62.5%; /* 1rem = 10px */
 }
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body {
+    display: grid;
+    min-height: 100dvh; /* para que el body ocupe toda la altura de la ventana */
+    grid-template-rows: auto 2fr auto; /* para que el footer esté al final de la página */
     font-family: var(--bodyFont);
     font-size: 1.6rem;
     line-height: 2; /* para mejorar la legibilidad - ideal para párrafos de blog. Esto es el interlineado */
@@ -177,4 +181,23 @@ img {
 .footer {
     background-color: var(--black);
     margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    /*  Método 1 con flexbox
+    .about-us {
+        display: flex;
+        justify-content: space-between; para separar los elementos a los extremos
+    }
+    .about-us__image,
+    .about-us__text {
+        flex-basis: calc(50% - 1rem); para que cada elemento ocupe la mitad del contenedor menos el espacio entre ellos
+    }    
+    */
+    
+    .about-us {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
 }
