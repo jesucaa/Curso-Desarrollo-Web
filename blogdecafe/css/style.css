@@ -1,13 +1,12 @@
 :root {
     --headingFont: 'PT Sans', sans-serif;
     --bodyFont: 'Open Sans', sans-serif;
-    --primary: #6f4e37;
+    --primary: #784D3C;
     --secondary: #c0a080;
     --fontColor: #333333;
     --gray: #e1e1e1;
     --white: #ffffff;
     --black: #000000;
-    /* paleta de colores: primario: #784D3C, blanco: fffffff, negro: 000000 */
 }
 html {
     box-sizing: border-box; /* para que el padding y border no afecten el tamaño de los elementos */
@@ -19,13 +18,17 @@ html {
 body {
     font-family: var(--bodyFont);
     font-size: 1.6rem;
-    line-height: 2; /* para mejorar la legibilidad - ideal para párrafos de blog */
+    line-height: 2; /* para mejorar la legibilidad - ideal para párrafos de blog. Esto es el interlineado */
 }
 
 /* Globales */
 .container {
-    max-width: 120rem;
-    width: 90%;
+    max-width: 120rem; /* para limitar el ancho máximo del contenedor */
+    width: 90%; /* para que no ocupe todo el ancho en pantallas pequeñas */
+    /* 
+    ** Otra forma de ocupar el max-width y width al mismo tiempo es:
+    ** width: min(90%, 120rem);
+    **/
     margin: 0 auto;
 }
 a {
@@ -33,6 +36,7 @@ a {
 }
 h1, h2, h3, h4 {
     font-family: var(--headingFont);
+    line-height: 1.2; /* para mejorar la legibilidad de los títulos */
 }
 h1 {
     font-size: 4.8rem;
@@ -60,6 +64,12 @@ img {
 .center-text {
     text-align: center;
 }
+.bold {
+    font-weight: 700;
+}
+.regular {
+    font-weight: 400;
+}
 
 /* Header - Puedes guiarte aquí para hacer un hero */
 .header {
@@ -79,7 +89,9 @@ img {
         margin-top: 15rem;
     }
 }
-
+.bar {
+    padding: 3rem 0;
+}
 @media (min-width: 768px) {
     .bar {
         display: flex;
@@ -93,9 +105,6 @@ img {
 }
 .logo__name{
     font-weight: 400;
-}
-.logo__name--bold {
-    font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -145,4 +154,27 @@ img {
 }
 .button--primary {
     background-color: var(--black);
+}
+.button--secondary {
+    background-color: var(--primary);
+}
+.courses {
+    list-style: none;
+}
+.widget-course {
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2rem;
+}
+.widget-course:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.widget-course__label, 
+.widget-course__info {
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--black);
+    margin-top: 4rem;
 }
