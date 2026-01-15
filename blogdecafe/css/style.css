@@ -156,6 +156,10 @@ img {
         display: inline-block;
     }
 }
+.button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
 .button--primary {
     background-color: var(--black);
 }
@@ -172,6 +176,9 @@ img {
 .widget-course:last-of-type {
     border-bottom: none;
     margin-bottom: 0;
+}
+.widget-course__label {
+    font-family: var(--headingFont);
 }
 .widget-course__label, 
 .widget-course__info {
@@ -200,4 +207,67 @@ img {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 2rem;
     }
+}
+
+/* Cursos */
+.course {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gray);
+}
+@media (min-width: 768px) {
+    .course {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.course:last-of-type {
+    border-bottom: none;
+}
+.course {
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2rem;
+}
+.course:last-of-type {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+.course__label {
+    font-family: var(--headingFont);
+}
+.course__label, 
+.course__info {
+    font-size: 2rem;
+}
+
+/* Contacto */
+.contact-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.form {
+    background-color: var(--white);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+.field {
+    display: flex; /* para alinear el label y el input en una fila */
+    margin-bottom: 3rem; /* para separar los campos del formulario */
+}
+.field__label {
+    flex: 0 0 9rem; /* 0 0 (0: no tiene factor de crecimiento, 0: tampoco se hará más pequeño) para que el label ocupe 9rem de ancho y no se expanda */
+    text-align: right; /* para alinear el texto a la derecha */
+    padding-right: 2rem; /* para separar el label del input */
+}
+.field__input {
+    flex: 1; /* para que el input ocupe el resto del espacio */
+    border: 1px solid var(--gray);
+}
+.field__input--textarea {
+    height: 20rem; /* para que el textarea sea más alto */
 }
