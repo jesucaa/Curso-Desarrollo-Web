@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"> <!-- importante mantener siempre esta etiqueta meta por cuestiones de la escritura en español -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- importante para que el sitio web sea responsivo (medias query) -->
     <title>Blog de Café</title>
+    <meta name="description" content="Página web de blog de café"> <!-- importante para SEO -->
+
+    <!-- Prefetch: Nos funciona para cargar la siguiente página que esperamos que el usuario visite para darle una mejor experiencia de usuario y sea más rápido -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload: va a cargar inmediatamente elementos que consideras necesarios o que deben de cargarse lo más pronto posible -->
+    <link rel="preload" href="css/normalize.css" as="style">
     <link rel="stylesheet" href="css/normalize.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <header class="header">
@@ -41,7 +52,10 @@
 
             <article class="post">
                 <div class="post__img">
-                    <img src="img/blog1.webp" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="imagen blog">
+                    </picture>
                 </div>
 
                 <div class="post__content">
@@ -53,7 +67,10 @@
 
             <article class="post">
                 <div class="post__img">
-                    <img src="img/blog2.webp" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="imagen blog">
+                    </picture>
                 </div>
 
                 <div class="post__content">
@@ -65,7 +82,10 @@
 
             <article class="post">
                 <div class="post__img">
-                    <img src="img/blog3.webp" alt="imagen blog">
+                    <picture>
+                        <source loading="lazy" srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="imagen blog">
+                    </picture>
                 </div>
 
                 <div class="post__content">
@@ -88,7 +108,7 @@
                     <p class="widget-course__label bold">Cupo:
                         <span class="widget-course__info regular">20</span>
                     </p>
-                    <a href="post.html" class="button button--secondary">Más Información</a>
+                    <a href="post.html" class="button button--secondary">Más Información sobre nuestros cursos</a>
                 </li>
 
                 <li class="widget-course">
@@ -99,7 +119,7 @@
                     <p class="widget-course__label bold">Cupo:
                         <span class="widget-course__info regular">20</span>
                     </p>
-                    <a href="post.html" class="button button--secondary">Más Información</a>
+                    <a href="post.html" class="button button--secondary">Más Información sobre nuestros cursos</a>
                 </li>
             </ul>
         </aside>
@@ -121,7 +141,7 @@
                 </nav>
             </div>
         </div>
-
     </footer>
+    <script src="js/modernizr.js"></script>
 </body>
 </html>
