@@ -12,7 +12,7 @@ resultado = Math.pow(2, 3); // Potencia de un número (2 elevado a la 3 se convi
 resultado = Math.max(10, 20, 5); // Devuelve el número máximo de una lista de números (10, 20 y 5 devuelve 20)
 resultado = Math.min(10, 20, 5); // Devuelve el número mínimo de una lista de números (10, 20 y 5 devuelve 5)
 resultado = Math.random(); // Devuelve un número aleatorio entre 0 y 1
-resultado = Math.floor(Math.random() * 100) // Devuelve un número aleatorio entre 0 y 99
+resultado = Math.floor(Math.random() * 100); // Devuelve un número aleatorio entre 0 y 99
 resultado = Math.floor(Math.random() * 100) + 1; // Devuelve un número aleatorio entre 1 y 100
 
 console.log(resultado); // Imprime el resultado

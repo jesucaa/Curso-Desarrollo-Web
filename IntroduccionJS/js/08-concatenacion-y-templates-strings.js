@@ -1,5 +1,5 @@
 const nombre = 'Jesus';
-const email = 'jesus@correo.com'
+const email = 'jesus@correo.com';
 
 // Concatenación
 console.log('Nombre: ' + nombre + ' Email: ' + email);
