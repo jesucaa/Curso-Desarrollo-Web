@@ -1,6 +1,6 @@
 # 🌐 Curso de Desarrollo Web Completo – Mi Inicio en el Mundo del Desarrollo Web
 
-Este repositorio contiene mi progreso y proyectos realizados durante el **curso técnico y completo de desarrollo web**, impartido por **Juan Pablo De la Torre Valdez** de su website [Código con Juan](https://codigoconjuan.com). Aquí documento mi aprendizaje desde las bases hasta la creación de aplicaciones dinámicas.
+> 📚 Este repositorio contiene mi progreso y proyectos realizados durante el **curso técnico y completo de desarrollo web**, impartido por **Juan Pablo De la Torre Valdez** de su website [Código con Juan](https://codigoconjuan.com). Aquí documento mi aprendizaje desde las bases hasta la creación de aplicaciones dinámicas.
 
 ## 🚀 Tecnologías y Herramientas
 
